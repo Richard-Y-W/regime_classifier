@@ -1,0 +1,17 @@
+pandas
+numpy
+yfinance
+scikit-learn
+matplotlib
+seaborn
+torch
+hmmlearn
+pomegranate
+jupyter
+notebook
+tqdm
+joblib
+plotly
+mlflow
+streamlit
+pytorch-lightning
