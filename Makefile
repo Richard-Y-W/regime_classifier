@@ -24,8 +24,17 @@ data:
 features:
 	python src/features.py --in data/raw/ --out data/processed/features.csv
 
+hmm:
+	python src/hmm_regimes.py --input data/processed/features.csv --out-model models/hmm_model.pkl --out-plot figs/regimes_timeline.png
+
+supervised:
+	python src/prepare_supervised.py --input data/processed/features_with_regimes.csv --out data/processed/supervised_t5.csv --horizon 5
+
 train:
-	python src/hmm_regimes.py --in data/processed/features.csv --out models/hmm.pkl
+	python src/lstm_predictor.py --input data/processed/supervised_t5.csv --epochs 50
+
+evaluate:
+	python src/eval.py --input data/processed/supervised_t5.csv --model models/lstm_best.pt --out-fig figs/confusion_matrix.png
 
 # --- Maintenance ---
 clean:

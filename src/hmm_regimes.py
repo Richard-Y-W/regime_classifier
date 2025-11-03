@@ -193,6 +193,10 @@ def main(args):
 
     # 8) plot timeline
     plot_regimes(df_labeled, price_col="Adj Close", out_path=out_plot)
+    # Save labeled features with cluster and regime columns
+    df.to_csv("data/processed/features_with_clusters.csv", index=True)
+    print("✅ Saved labeled features_with_clusters.csv")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fit GMM/HMM to discover market regimes")
