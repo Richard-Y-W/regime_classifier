@@ -26,8 +26,7 @@ This project combines:
 
 
 
-!\[Regime timeline](figs/regimes\_timeline.png)
-
+![Regime Timeline](figs/regimes_timeline.png)
 
 
 ---
@@ -82,8 +81,7 @@ This project combines:
 
 | Recall | Balanced across classes |
 
-| Confusion Matrix | !\[Confusion Matrix](figs/confusion\_matrix.png) |
-
+![Confusion Matrix](figs/confusion_matrix.png)
 
 
 The model correctly identifies regime transitions and maintains stability during persistent periods.
@@ -98,7 +96,7 @@ The model correctly identifies regime transitions and maintains stability during
 
 
 
-!\[LSTM Timeline](figs/lstm\_regime\_timeline.png)
+![LSTM Timeline](figs/lstm\_regime\_timeline.png)
 
 
 
